@@ -10,6 +10,9 @@ const config: Config = {
     moduleNameMapper: {
         '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
     },
+    collectCoverage: true,
+    collectCoverageFrom: ['src/**/*.{ts,tsx}', '!src/**/*.d.ts', '!src/**/index.ts', '!src/**/setupTests.ts'],
+    coverageDirectory: 'coverage',
 };
 
 export default config;
