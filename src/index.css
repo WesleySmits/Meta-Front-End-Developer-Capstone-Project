@@ -5,6 +5,7 @@
     --color-white: #fff;
     --color-black: #000;
     --color-gray: #f8f9fa;
+    --color-disabled: #ced4da;
 
     --color-primary: var(--color-green);
     --color-secondary: var(--color-yellow);
