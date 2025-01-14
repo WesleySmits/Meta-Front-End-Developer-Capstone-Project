@@ -11,6 +11,6 @@
         "strict": true,
         "skipLibCheck": true
     },
-    "include": ["src/types/global.d.ts", "src/test/setup.ts"],
+    "include": ["src/types/global.d.ts"],
     "exclude": ["node_modules"]
 }

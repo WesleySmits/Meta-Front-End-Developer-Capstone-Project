@@ -1,3 +1,5 @@
+import enTranslations from './locales/en.json';
+
 export function getLocale(): string {
     let userLocale = window.navigator.language;
 
@@ -9,12 +11,17 @@ export function getLocale(): string {
     return userLocale ?? 'en';
 }
 
-export async function getTranslations(requestedLocale?: string): Promise<Record<string, string>> {
+export async function getTranslations(requestedLocale?: string): Promise<Record<string, string> | null> {
     const locale = requestedLocale ?? getLocale();
+
     try {
-        return (await import(`./${locale}.json`)).default;
+        if (locale === 'nl') {
+            return (await import(`./locales/nl.json`)).default;
+        }
     } catch (error) {
         console.warn(`Translations for locale "${locale}" not found. Falling back to English.`, error);
-        return (await import('./en.json')).default;
+        return enTranslations;
     }
+
+    return enTranslations;
 }
