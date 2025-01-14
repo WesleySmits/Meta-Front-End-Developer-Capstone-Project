@@ -9,6 +9,7 @@ const config: Config = {
     },
     moduleNameMapper: {
         '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
+        '\\.(gif|ttf|eot|svg)$': '<rootDir>/src/test/fileMock.ts',
     },
     collectCoverage: true,
     collectCoverageFrom: ['src/**/*.{ts,tsx}', '!src/**/*.d.ts', '!src/**/index.ts', '!src/**/setupTests.ts'],
