@@ -14,6 +14,11 @@ const config: Config = {
     collectCoverage: true,
     collectCoverageFrom: ['src/**/*.{ts,tsx}', '!src/**/*.d.ts', '!src/**/index.ts', '!src/**/setupTests.ts'],
     coverageDirectory: 'coverage',
+    globals: {
+        transform: {
+            '^.+\\.tsx?$': ['ts-jest', { tsconfig: './tsconfig.test.json' }], // Configure ts-jest here
+        },
+    },
 };
 
 export default config;

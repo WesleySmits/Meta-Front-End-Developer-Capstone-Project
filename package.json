@@ -9,7 +9,7 @@
         "lint": "eslint .",
         "format": "prettier --write .",
         "preview": "vite preview",
-        "test": "jest"
+        "test": "jest --config jest.config.ts"
     },
     "dependencies": {
         "react": "^18.3.1",

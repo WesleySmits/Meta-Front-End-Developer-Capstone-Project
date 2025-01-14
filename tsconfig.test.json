@@ -3,20 +3,13 @@
     "noEmit": false,
     "compilerOptions": {
         "types": ["jest", "@testing-library/jest-dom", "node"],
-        "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
         "target": "ES2020",
-        "useDefineForClassFields": true,
         "lib": ["ES2020", "DOM", "DOM.Iterable"],
         "module": "ESNext",
+        "moduleResolution": "node",
         "skipLibCheck": true,
-
-        /* Bundler mode */
-        "moduleResolution": "bundler",
-        "allowImportingTsExtensions": true,
-        "emitDeclarationOnly": true,
-        "isolatedModules": true,
-        "moduleDetection": "force",
         "jsx": "react-jsx",
+        "resolveJsonModule": true,
 
         /* Linting */
         "strict": true,
@@ -26,9 +19,7 @@
         "noUncheckedSideEffectImports": true,
 
         "esModuleInterop": true,
-        "allowSyntheticDefaultImports": true,
-        "composite": true,
-        "noEmit": false
+        "allowSyntheticDefaultImports": true
     },
-    "include": ["src/**/*", "src/test/setup.ts"]
+    "include": ["src", "src/test/setup.ts"]
 }
