@@ -7,6 +7,7 @@ import Header from './components/layout/header/Header';
 import { useCallback, useState } from 'react';
 import SidePanel from './components/base/side-panel/SidePanel';
 import MobileNavigation from './components/navigation/mobile/MobileNavigation';
+import Footer from './components/layout/footer/Footer';
 
 function App() {
     const [isPanelOpen, setPanelOpen] = useState(false);
@@ -27,9 +28,7 @@ function App() {
                     </Routes>
                 </main>
 
-                <footer>
-                    <p>&copy; 2025 Little Lemon</p>
-                </footer>
+                <Footer />
 
                 <SidePanel isOpen={isPanelOpen} onClose={handlePanelClose}>
                     <MobileNavigation />
