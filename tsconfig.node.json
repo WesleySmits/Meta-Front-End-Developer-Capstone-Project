@@ -8,8 +8,7 @@
 
         /* Bundler mode */
         "moduleResolution": "node",
-        "allowImportingTsExtensions": true,
-        "emitDeclarationOnly": false,
+        "allowImportingTsExtensions": false,
         "isolatedModules": true,
         "moduleDetection": "force",
 
@@ -21,7 +20,7 @@
         "noUncheckedSideEffectImports": true,
 
         "composite": true,
-        "noEmit": true
+        "noEmit": false
     },
     "include": ["vite.config.ts"]
 }
