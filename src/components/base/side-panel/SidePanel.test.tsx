@@ -91,4 +91,17 @@ describe('SidePanel Component', () => {
             expect(dialog.open).toBe(false);
         });
     });
+
+    it('shoudl close the dialog when the backdrop is clicked', async () => {
+        render(getSidePanel(true, onCloseMock));
+
+        const dialog = screen.getByTestId<HTMLDialogElement>(testId);
+        await waitFor(() => {
+            userEvent.click(dialog);
+        });
+
+        await waitFor(() => {
+            expect(onCloseMock).toHaveBeenCalledTimes(1);
+        });
+    });
 });

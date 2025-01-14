@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import NavigationMenu from './links';
+import NavigationMenu from '../links';
 import styles from './MobileNavigation.module.css';
 
 const MobileNavigation: React.FC = () => {

@@ -3,10 +3,10 @@ import { HelmetProvider } from 'react-helmet-async';
 import HomePage from './pages/HomePage';
 import ReservePage from './pages/ReservePage';
 import NotFoundPage from './pages/404Page';
-import Header from './components/layout/Header';
+import Header from './components/layout/header/Header';
 import { useCallback, useState } from 'react';
 import SidePanel from './components/base/side-panel/SidePanel';
-import MobileNavigation from './components/navigation/MobileNavigation';
+import MobileNavigation from './components/navigation/mobile/MobileNavigation';
 
 function App() {
     const [isPanelOpen, setPanelOpen] = useState(false);

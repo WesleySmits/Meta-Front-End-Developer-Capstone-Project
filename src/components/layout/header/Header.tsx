@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
-import { ButtonVariant } from '../base/button/Button.types';
-import ButtonLink from '../base/button/ButtonLink';
-import DesktopNavigation from '../navigation/DesktopNavigation';
+import { ButtonVariant } from '../../base/button/Button.types';
+import ButtonLink from '../../base/button/ButtonLink';
+import DesktopNavigation from '../../navigation/desktop/DesktopNavigation';
 import styles from './Header.module.css';
 
 interface HeaderProps {

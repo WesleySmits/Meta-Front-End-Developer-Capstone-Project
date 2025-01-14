@@ -1,4 +1,4 @@
-import NavigationMenu from './links';
+import NavigationMenu from '../links';
 import styles from './DesktopNavigation.module.css';
 import { NavLink } from 'react-router-dom';
 
