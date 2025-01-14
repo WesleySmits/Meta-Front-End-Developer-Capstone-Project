@@ -9,3 +9,6 @@ if (!global.TextEncoder) {
 if (!global.TextDecoder) {
     global.TextDecoder = TextDecoder as typeof global.TextDecoder;
 }
+
+HTMLDialogElement.prototype.showModal = jest.fn();
+HTMLDialogElement.prototype.close = jest.fn();
