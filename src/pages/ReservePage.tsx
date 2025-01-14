@@ -10,7 +10,7 @@ const ReservePage = () => {
                     content="Book your table at Little Lemon easily with our online reservation system."
                 />
             </Helmet>
-            <div>
+            <div className="container">
                 <h1>Reserve a Table</h1>
                 <p>Book your table with ease using our online reservation system.</p>
             </div>
