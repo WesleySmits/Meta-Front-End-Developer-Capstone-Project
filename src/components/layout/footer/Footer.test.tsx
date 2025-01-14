@@ -25,7 +25,6 @@ describe('Footer', () => {
         // Navigation links
         const navSection = screen.getByRole('navigation');
         const navLinks = within(navSection).getAllByRole('link');
-        console.log(navLinks.map((link) => link.textContent));
         expect(navLinks).toHaveLength(3);
         expect(navLinks[0]).toHaveTextContent('Home');
         expect(navLinks[0]).toHaveAttribute('href', '/');
