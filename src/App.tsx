@@ -21,11 +21,13 @@ function App() {
             <Router>
                 <Header isMobileMenuOpen={isPanelOpen} setMobileMenuOpen={setPanelOpen} />
                 <main>
-                    <Routes>
-                        <Route path="/" element={<HomePage />} />
-                        <Route path="/reserve" element={<ReservePage />} />
-                        <Route path="*" element={<NotFoundPage />} />
-                    </Routes>
+                    <div className="container">
+                        <Routes>
+                            <Route path="/" element={<HomePage />} />
+                            <Route path="/reserve" element={<ReservePage />} />
+                            <Route path="*" element={<NotFoundPage />} />
+                        </Routes>
+                    </div>
                 </main>
 
                 <Footer />

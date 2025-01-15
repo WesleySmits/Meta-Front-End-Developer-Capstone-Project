@@ -7,6 +7,7 @@
 
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: var(--spacing-small);
     padding: var(--spacing-small) var(--spacing-medium);
     border: 1px solid var(--button-border-color);

@@ -12,12 +12,17 @@ const HomePage = () => {
             <Helmet>
                 <title>{translations.homepageMetaTitle}</title>
                 <meta name="description" content={translations.homepageMetaDescription} />
+
+                <meta property="og:title" content={translations.homepageMetaTitle} />
+                <meta property="og:description" content={translations.homepageMetaDescription} />
+                <meta property="og:image" content="/recipe.jpg" />
+                <meta property="og:url" content="https://little-lemon-capstone-project.io" />
             </Helmet>
 
-            <section className={`container ${styles.innerContainer}`}>
+            <section className={`${styles.innerContainer}`}>
                 <div>
-                    <h1>{translations.homepageTitle}</h1>
-                    <h2>{translations.homepageSubtitle}</h2>
+                    <h1 className={styles.title}>{translations.homepageTitle}</h1>
+                    <h2 className={styles.subTitle}>{translations.homepageSubtitle}</h2>
                     <p>{translations.homepageParagraph}</p>
                     <p>{translations.homepageParagraph2}</p>
 
