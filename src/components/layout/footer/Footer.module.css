@@ -1,11 +1,5 @@
 .footer {
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    gap: 1rem;
     padding: 2rem 0;
-    max-width: var(--container-max-width);
-    margin: auto;
 
     p {
         margin: 0;
@@ -14,6 +8,13 @@
     img {
         max-width: 15vw;
     }
+}
+
+.container {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    gap: 1rem;
 }
 
 .footerColumns {

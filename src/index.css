@@ -204,4 +204,12 @@ main {
 .container {
     max-width: var(--container-max-width);
     margin: auto;
+
+    padding-inline: 0.5rem;
+}
+
+@media (min-width: 1296px) {
+    .container {
+        padding-inline: unset;
+    }
 }
