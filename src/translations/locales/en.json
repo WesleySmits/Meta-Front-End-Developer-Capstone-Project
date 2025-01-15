@@ -1,10 +1,27 @@
 {
+    "notFoundMetaTitle": "404 - Page Not Found - Little Lemon",
+    "notFoundMetaDescription": "The page you are looking for does not exist. Return to the homepage.",
+    "notFoundTitle": "404 - Page Not Found",
+    "notFoundParagraph": "Page not found. The link you followed may be broken or the page may have been removed.",
     "homepageMetaTitle": "Little Lemon - Mediterranean Restaurant based in Rotterdam",
     "homepageMetaDescription": "Little Lemon is a Mediterranean restaurant based in Rotterdam. We serve delicious food and drinks.",
     "homepageTitle": "Welcome to Little Lemon",
     "homepageSubtitle": "Experience the finest Mediterranean cuisine made with fresh, organic ingredients.",
     "homepageParagraph": "At Little Lemon, we take pride in serving authentic Mediterranean cuisine that celebrates the richness of fresh, seasonal ingredients. Our dishes are inspired by traditional recipes, crafted with care, and presented with a modern twist.",
     "homepageParagraph2": "From our flavorful appetizers to our hearty mains and decadent desserts, every bite is a journey to the Mediterranean. Whether you're dining with friends, celebrating a special occasion, or enjoying a quiet evening, our cozy ambiance and warm hospitality make Little Lemon the perfect destination for any occasion.",
+    "reservePageMetaTitle": "Reserve a Table - Little Lemon",
+    "reservePageMetaDescription": "Book your table at Little Lemon easily with our online reservation system.",
+    "reservePageIntroduction": "Book your table with ease using our online reservation system.",
     "reserveATable": "Reserve a Table",
-    "deliciousRecipe": "Delicious recipe"
+    "deliciousRecipe": "Delicious recipe",
+    "date": "Date",
+    "time": "Time",
+    "selectATime": "Select a Time",
+    "numberOfPeople": "Number of People",
+    "name": "Name",
+    "email": "Email",
+    "phone": "Phone",
+    "reservationSuccess": "Reservation successful!",
+    "allFieldsRequired": "All fields are required.",
+    "backToHomepage": "Back to Homepage"
 }

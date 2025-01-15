@@ -1,18 +1,26 @@
 import { Helmet } from 'react-helmet-async';
+import ReservationForm from '../components/ReservationForm';
+import { useTranslations } from '../translations/TranslationContext';
 
 const ReservePage = () => {
+    const translations = useTranslations();
+
     return (
         <>
             <Helmet>
-                <title>Reserve a Table - Little Lemon</title>
-                <meta
-                    name="description"
-                    content="Book your table at Little Lemon easily with our online reservation system."
-                />
+                <title>{translations.reservePageMetaTitle}</title>
+                <meta name="description" content={translations.reservePageMetaDescription} />
+
+                <meta property="og:title" content={translations.reservePageMetaTitle} />
+                <meta property="og:description" content={translations.reservePageMetaDescription} />
+                <meta property="og:image" content="/logo.png" />
+                <meta property="og:url" content="https://little-lemon-capstone-project.io/reserve" />
             </Helmet>
             <div className="container">
-                <h1>Reserve a Table</h1>
-                <p>Book your table with ease using our online reservation system.</p>
+                <h1>{translations.reserveATable}</h1>
+                <p>{translations.reservePageIntroduction}</p>
+
+                <ReservationForm />
             </div>
         </>
     );

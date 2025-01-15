@@ -1,18 +1,26 @@
 import { Helmet } from 'react-helmet-async';
+import { useTranslations } from '../translations/TranslationContext';
+import ButtonLink from '../components/base/button/ButtonLink';
+import { ButtonVariant } from '../components/base/button/Button.types';
 
 const NotFoundPage = () => {
+    const translations = useTranslations();
     return (
         <>
             <Helmet>
-                <title>404 - Page Not Found - Little Lemon</title>
-                <meta
-                    name="description"
-                    content="The page you are looking for does not exist. Return to the home page."
-                />
+                <title>{translations.notFoundMetaTitle}</title>
+                <meta name="description" content={translations.notFoundMetaDescription} />
+
+                <meta property="og:title" content={translations.notFoundMetaTitle} />
+                <meta property="og:description" content={translations.notFoundMetaDescription} />
+                <meta property="og:image" content="/logo.png" />
             </Helmet>
+
             <div>
-                <h1>404</h1>
-                <p>Page not found. The link you followed may be broken or the page may have been removed.</p>
+                <h1>{translations.notFoundTitle}</h1>
+                <p>{translations.notFoundParagraph}</p>
+
+                <ButtonLink href="/" label={translations.backToHomepage} variant={ButtonVariant.Secondary} />
             </div>
         </>
     );
