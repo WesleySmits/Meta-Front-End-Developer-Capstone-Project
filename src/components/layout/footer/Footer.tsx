@@ -46,7 +46,7 @@ const Footer: React.FC = () => {
                 </section>
             </div>
 
-            <p>&copy; {year} Little Lemon</p>
+            <small>&copy; {year} Little Lemon</small>
         </footer>
     );
 };

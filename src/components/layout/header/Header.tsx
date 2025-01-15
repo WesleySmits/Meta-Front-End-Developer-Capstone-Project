@@ -19,8 +19,7 @@ const Header: React.FC<HeaderProps> = ({ isMobileMenuOpen, setMobileMenuOpen }) 
             <DesktopNavigation className={styles.desktopNavigation} />
 
             <div className={styles.ctaButtons}>
-                <ButtonLink href="/reserve" variant={ButtonVariant.Primary} label="Reserve a Table" />
-                <ButtonLink href="/order" variant={ButtonVariant.Secondary} label="Order Online" />
+                <ButtonLink href="/reserve" variant={ButtonVariant.Secondary} label="Reserve a Table" />
             </div>
 
             <button
