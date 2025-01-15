@@ -3,6 +3,20 @@
     "notFoundMetaDescription": "De pagina die je zoekt bestaat niet. Ga terug naar de homepage.",
     "notFoundTitle": "404 - Pagina Niet Gevonden",
     "notFoundParagraph": "Pagina niet gevonden. De link die je hebt gevolgd is mogelijk verbroken of de pagina is verwijderd.",
+
+    "aboutPageMetaTitle": "Over Ons - Little Lemon",
+    "aboutPageMetaDescription": "Leer meer over Little Lemon, een Mediterraans restaurant gevestigd in Rotterdam.",
+    "aboutPageTitle": "Over Ons",
+    "aboutPageSubtitle": "Ontdek het verhaal achter Little Lemon.",
+    "aboutPageParagraph": "Little Lemon is een Mediterraans restaurant gevestigd in het hart van Rotterdam. Onze missie is om de smaken van de Middellandse Zee naar jouw tafel te brengen, met behulp van verse, biologische ingrediënten en traditionele recepten.",
+    "aboutPageParagraph2": "Onze menukaart is geïnspireerd op de diverse keukens van de Middellandse Zee regio, van de zonovergoten kusten van Griekenland en Italië tot de kruidenrijke markten van Marokko en Turkije. Elk gerecht is zorgvuldig samengesteld om de levendige smaken en rijke culinaire erfgoed van de Middellandse Zee te laten zien.",
+
+    "contactPageMetaTitle": "Contact - Little Lemon",
+    "contactPageMetaDescription": "Neem contact op met Little Lemon voor vragen, reserveringen of feedback.",
+    "contactPageTitle": "Contact",
+    "contactPageSubtitle": "Heb je vragen, reserveringen of feedback? Neem contact met ons op.",
+    "contactPageParagraph": "Heb je vragen, reserveringen of feedback? Neem contact met ons via ons telefoonnummer.",
+
     "homepageMetaTitle": "Little Lemon - Mediterraans Restaurant in Rotterdam",
     "homepageMetaDescription": "Little Lemon is een Mediterraans restaurant in Rotterdam. Wij serveren heerlijke gerechten en dranken.",
     "homepageTitle": "Welkom bij Little Lemon",
@@ -36,5 +50,6 @@
     "dinersPlaceholder": "4",
     "namePlaceholder": "John Doe",
     "emailPlaceholder": "johndoe@example.com",
-    "phonePlaceholder": "+123456789"
+    "phonePlaceholder": "+123456789",
+    "callUs": "Bel Ons"
 }

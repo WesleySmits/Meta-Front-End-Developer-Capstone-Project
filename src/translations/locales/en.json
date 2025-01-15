@@ -3,6 +3,20 @@
     "notFoundMetaDescription": "The page you are looking for does not exist. Return to the homepage.",
     "notFoundTitle": "404 - Page Not Found",
     "notFoundParagraph": "Page not found. The link you followed may be broken or the page may have been removed.",
+
+    "aboutPageMetaTitle": "About Us - Little Lemon",
+    "aboutPageMetaDescription": "Learn more about Little Lemon, a Mediterranean restaurant based in Rotterdam.",
+    "aboutPageTitle": "About Us",
+    "aboutPageSubtitle": "Discover the story behind Little Lemon.",
+    "aboutPageParagraph": "Little Lemon is a Mediterranean restaurant located in the heart of Rotterdam. Our mission is to bring the flavors of the Mediterranean to your table, using fresh, organic ingredients and traditional recipes.",
+    "aboutPageParagraph2": "Our menu is inspired by the diverse cuisines of the Mediterranean region, from the sun-drenched coasts of Greece and Italy to the spice-filled markets of Morocco and Turkey. Each dish is carefully crafted to showcase the vibrant flavors and rich culinary heritage of the Mediterranean.",
+
+    "contactPageMetaTitle": "Contact - Little Lemon",
+    "contactPageMetaDescription": "Get in touch with Little Lemon for questions, reservations, or feedback.",
+    "contactPageTitle": "Contact",
+    "contactPageSubtitle": "Have questions, reservations, or feedback? Get in touch with us.",
+    "contactPageParagraph": "Have questions, reservations, or feedback? Get in touch with us by giving us a call.",
+
     "homepageMetaTitle": "Little Lemon - Mediterranean Restaurant based in Rotterdam",
     "homepageMetaDescription": "Little Lemon is a Mediterranean restaurant based in Rotterdam. We serve delicious food and drinks.",
     "homepageTitle": "Welcome to Little Lemon",
@@ -36,5 +50,6 @@
     "dinersPlaceholder": "4",
     "namePlaceholder": "John Doe",
     "emailPlaceholder": "johndoe@example.com",
-    "phonePlaceholder": "+123456789"
+    "phonePlaceholder": "+123456789",
+    "callUs": "Call Us"
 }

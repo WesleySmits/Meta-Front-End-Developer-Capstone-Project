@@ -9,6 +9,8 @@ import Footer from './components/layout/footer/Footer';
 const HomePage = lazy(() => import('./pages/HomePage'));
 const ReservePage = lazy(() => import('./pages/ReservePage'));
 const NotFoundPage = lazy(() => import('./pages/404Page'));
+const AboutPage = lazy(() => import('./pages/AboutPage'));
+const ContactPage = lazy(() => import('./pages/ContactPage'));
 
 function App() {
     const [isPanelOpen, setPanelOpen] = useState(false);
@@ -27,6 +29,8 @@ function App() {
                             <Routes>
                                 <Route path="/" element={<HomePage />} />
                                 <Route path="/reserve" element={<ReservePage />} />
+                                <Route path="/about" element={<AboutPage />} />
+                                <Route path="/contact" element={<ContactPage />} />
                                 <Route path="*" element={<NotFoundPage />} />
                             </Routes>
                         </Suspense>
