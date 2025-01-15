@@ -1,3 +1,4 @@
+import '@testing-library/jest-dom';
 import { render, screen, within } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import Footer from './Footer';

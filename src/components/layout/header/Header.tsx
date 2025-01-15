@@ -27,6 +27,7 @@ const Header: React.FC<HeaderProps> = ({ isMobileMenuOpen, setMobileMenuOpen }) 
             <button
                 className={`${styles.mobileMenuButton} ${isMobileMenuOpen ? styles.open : ''}`}
                 onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}
+                data-testid="mobile-menu-button"
             >
                 <span></span>
                 <span></span>

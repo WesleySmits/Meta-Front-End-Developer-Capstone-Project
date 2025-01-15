@@ -1,3 +1,4 @@
+import '@testing-library/jest-dom';
 import { render, screen, fireEvent } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
 import Header from './Header';
@@ -35,25 +36,24 @@ describe('Header Component', () => {
         renderHeader(false);
 
         const reserveButton = screen.getByText('Reserve a Table');
-        const orderButton = screen.getByText('Order Online');
+        const languageSwitcher = screen.getByTestId('language-switcher');
 
         expect(reserveButton).toBeInTheDocument();
         expect(reserveButton.closest('a')).toHaveAttribute('href', '/reserve');
-        expect(orderButton).toBeInTheDocument();
-        expect(orderButton.closest('a')).toHaveAttribute('href', '/order');
+        expect(languageSwitcher).toBeInTheDocument();
     });
 
     it('should render the hamburger menu button', () => {
         renderHeader(false);
 
-        const hamburgerButton = screen.getByRole('button');
+        const hamburgerButton = screen.getByTestId('mobile-menu-button');
         expect(hamburgerButton).toBeInTheDocument();
     });
 
     it('should call setMobileMenuOpen when the hamburger menu button is clicked', () => {
         renderHeader(false);
 
-        const hamburgerButton = screen.getByRole('button');
+        const hamburgerButton = screen.getByTestId('mobile-menu-button');
         fireEvent.click(hamburgerButton);
 
         expect(setMobileMenuOpenMock).toHaveBeenCalledTimes(1);
@@ -63,7 +63,7 @@ describe('Header Component', () => {
     it('should add the open class to the hamburger menu when isMobileMenuOpen is true', () => {
         renderHeader(true);
 
-        const hamburgerButton = screen.getByRole('button');
+        const hamburgerButton = screen.getByTestId('mobile-menu-button');
         expect(hamburgerButton).toHaveClass('open');
     });
 });

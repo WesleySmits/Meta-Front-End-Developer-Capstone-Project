@@ -13,7 +13,7 @@ const LanguageSwitcher: React.FC = () => {
     };
 
     return (
-        <button onClick={toggleLocale} className={styles.languageSwitcher}>
+        <button onClick={toggleLocale} className={styles.languageSwitcher} data-testid="language-switcher">
             <img
                 src={locale === 'en' ? enFlag : nlFlag}
                 alt={locale === 'en' ? 'English' : 'Dutch'}
