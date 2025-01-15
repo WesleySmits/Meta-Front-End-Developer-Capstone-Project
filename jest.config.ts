@@ -16,7 +16,7 @@ const config: Config = {
     coverageDirectory: 'coverage',
     globals: {
         transform: {
-            '^.+\\.tsx?$': ['ts-jest', { tsconfig: './tsconfig.test.json' }], // Configure ts-jest here
+            '^.+\\.tsx?$': ['ts-jest', { tsconfig: './tsconfig.test.json' }],
         },
     },
 };

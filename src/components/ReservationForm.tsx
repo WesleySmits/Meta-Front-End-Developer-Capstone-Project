@@ -1,95 +1,120 @@
 import React, { useState } from 'react';
+import { Formik, Form, Field, ErrorMessage } from 'formik';
+import * as Yup from 'yup';
 import styles from './ReservationForm.module.css';
 import Button from './base/button/Button';
 import { useTranslations } from '../translations/TranslationContext';
 import { ButtonVariant } from './base/button/Button.types';
 
+type ReservationFormValues = {
+    date: string;
+    time: string;
+    diners: string;
+    name: string;
+    email: string;
+    phone: string;
+};
+
 const ReservationForm: React.FC = () => {
-    const [formData, setFormData] = useState({
-        date: '',
-        time: '',
-        diners: 1,
-        name: '',
-        email: '',
-        phone: '',
-    });
-    const [error, setError] = useState<string | null>(null);
-    const [success, setSuccess] = useState<boolean>(false);
-
     const translations = useTranslations();
+    const [successMessage, setSuccessMessage] = useState<string | null>(null);
 
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
-        setFormData({ ...formData, [e.target.name]: e.target.value });
-    };
+    const validationSchema = Yup.object().shape({
+        date: Yup.string().required(translations.dateRequired),
+        time: Yup.string().required(translations.timeRequired),
+        diners: Yup.number()
+            .typeError(translations.invalidNumberOfPeople)
+            .min(1, translations.invalidNumberOfPeople)
+            .required(translations.numberOfPeopleRequired),
+        name: Yup.string().required(translations.nameRequired),
+        email: Yup.string().email(translations.invalidEmail).required(translations.emailRequired),
+        phone: Yup.string().required(translations.phoneRequired),
+    });
 
-    const handleSubmit = (e: React.FormEvent) => {
-        e.preventDefault();
+    const handleSubmit = (_: ReservationFormValues, { resetForm }: { resetForm: () => void }) => {
+        setSuccessMessage(translations.reservationSuccess);
 
-        // Make sure all data is filled in despite native HTML required attribute
-        if (!formData.date || !formData.time || !formData.name || !formData.email || !formData.phone) {
-            setError(translations.allFieldsRequired);
-            return;
-        }
-
-        setError(null);
-        setSuccess(true);
-
-        // Simulate sending data to a server
         setTimeout(() => {
-            console.log('Reservation Data:', formData);
-            setSuccess(false);
+            setSuccessMessage(null);
+            resetForm();
         }, 2000);
     };
 
     return (
-        <form className={styles.form} onSubmit={handleSubmit}>
-            <h2>{translations.reserveATable}</h2>
+        <Formik<ReservationFormValues>
+            initialValues={{
+                date: '',
+                time: '',
+                diners: '',
+                name: '',
+                email: '',
+                phone: '',
+            }}
+            validationSchema={validationSchema}
+            onSubmit={handleSubmit}
+        >
+            {({ isSubmitting }) => (
+                <Form className={styles.form}>
+                    <h2>{translations.reserveATable}</h2>
+                    {successMessage && <p className={styles.success}>{successMessage}</p>}
 
-            {error && <p className={styles.error}>{error}</p>}
-            {success && <p className={styles.success}>{translations.reservationSuccess}</p>}
+                    <div className={styles.fieldGroup}>
+                        <label htmlFor="date">{translations.date}</label>
+                        <Field type="date" name="date" id="date" placeholder={translations.datePlaceholder} />
+                        <ErrorMessage name="date" component="p" className={styles.error} />
+                    </div>
 
-            <label>
-                {translations.date}
-                <input type="date" name="date" value={formData.date} onChange={handleChange} />
-            </label>
+                    <div className={styles.fieldGroup}>
+                        <label htmlFor="time">{translations.time}</label>
+                        <Field as="select" name="time" id="time">
+                            <option value="">{translations.selectATime}</option>
+                            <option value="18:00">18:00</option>
+                            <option value="19:00">19:00</option>
+                            <option value="20:00">20:00</option>
+                        </Field>
+                        <ErrorMessage name="time" component="p" className={styles.error} />
+                    </div>
 
-            <label>
-                {translations.time}
-                <select name="time" value={formData.time} onChange={handleChange}>
-                    <option value="">{translations.selectATime}</option>
-                    <option value="18:00">18:00</option>
-                    <option value="19:00">19:00</option>
-                    <option value="20:00">20:00</option>
-                </select>
-            </label>
+                    <div className={styles.fieldGroup}>
+                        <label htmlFor="diners">{translations.numberOfPeople}</label>
+                        <Field
+                            type="number"
+                            name="diners"
+                            id="diners"
+                            min="1"
+                            placeholder={translations.dinersPlaceholder}
+                        />
+                        <ErrorMessage name="diners" component="p" className={styles.error} />
+                    </div>
 
-            <label>
-                {translations.numberOfPeople}
-                <input type="number" name="diners" min="1" value={formData.diners} onChange={handleChange} />
-            </label>
+                    <div className={styles.fieldGroup}>
+                        <label htmlFor="name">{translations.name}</label>
+                        <Field type="text" name="name" id="name" placeholder={translations.namePlaceholder} />
+                        <ErrorMessage name="name" component="p" className={styles.error} />
+                    </div>
 
-            <label>
-                {translations.name}
-                <input type="text" name="name" value={formData.name} onChange={handleChange} />
-            </label>
+                    <div className={styles.fieldGroup}>
+                        <label htmlFor="email">{translations.email}</label>
+                        <Field type="email" name="email" id="email" placeholder={translations.emailPlaceholder} />
+                        <ErrorMessage name="email" component="p" className={styles.error} />
+                    </div>
 
-            <label>
-                {translations.email}
-                <input type="email" name="email" value={formData.email} onChange={handleChange} />
-            </label>
+                    <div className={styles.fieldGroup}>
+                        <label htmlFor="phone">{translations.phone}</label>
+                        <Field type="tel" name="phone" id="phone" placeholder={translations.phonePlaceholder} />
+                        <ErrorMessage name="phone" component="p" className={styles.error} />
+                    </div>
 
-            <label>
-                {translations.phone}
-                <input type="tel" name="phone" value={formData.phone} onChange={handleChange} />
-            </label>
-
-            <Button
-                type="submit"
-                variant={ButtonVariant.Secondary}
-                label={translations.reserveATable}
-                onClick={() => {}}
-            />
-        </form>
+                    <Button
+                        type="submit"
+                        variant={ButtonVariant.Secondary}
+                        label={translations.reserveATable}
+                        onClick={() => {}}
+                        disabled={isSubmitting}
+                    />
+                </Form>
+            )}
+        </Formik>
     );
 };
 

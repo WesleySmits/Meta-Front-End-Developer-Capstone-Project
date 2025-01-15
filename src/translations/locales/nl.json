@@ -23,5 +23,18 @@
     "phone": "Telefoon",
     "reservationSuccess": "Reservering succesvol!",
     "allFieldsRequired": "Alle velden zijn verplicht.",
-    "backToHomepage": "Terug naar Homepage"
+    "backToHomepage": "Terug naar Homepage",
+    "dateRequired": "Selecteer een datum.",
+    "timeRequired": "Selecteer een tijd.",
+    "numberOfPeopleRequired": "Geef het aantal personen op.",
+    "nameRequired": "Voer je naam in.",
+    "emailRequired": "Voer je e-mailadres in.",
+    "phoneRequired": "Voer je telefoonnummer in.",
+    "invalidEmail": "Voer een geldig e-mailadres in.",
+    "invalidNumberOfPeople": "Voer een geldig aantal personen in.",
+    "datePlaceholder": "DD/MM/YYYY",
+    "dinersPlaceholder": "4",
+    "namePlaceholder": "John Doe",
+    "emailPlaceholder": "johndoe@example.com",
+    "phonePlaceholder": "+123456789"
 }

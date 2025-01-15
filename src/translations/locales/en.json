@@ -23,5 +23,18 @@
     "phone": "Phone",
     "reservationSuccess": "Reservation successful!",
     "allFieldsRequired": "All fields are required.",
-    "backToHomepage": "Back to Homepage"
+    "backToHomepage": "Back to Homepage",
+    "dateRequired": "Please select a date.",
+    "timeRequired": "Please select a time.",
+    "numberOfPeopleRequired": "Please specify the number of people.",
+    "nameRequired": "Please enter your name.",
+    "emailRequired": "Please enter your email.",
+    "phoneRequired": "Please enter your phone number.",
+    "invalidEmail": "Please enter a valid email address.",
+    "invalidNumberOfPeople": "Please enter a valid number of people.",
+    "datePlaceholder": "DD/MM/YYYY",
+    "dinersPlaceholder": "4",
+    "namePlaceholder": "John Doe",
+    "emailPlaceholder": "johndoe@example.com",
+    "phonePlaceholder": "+123456789"
 }
