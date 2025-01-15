@@ -5,7 +5,7 @@ import ButtonLink from '../components/base/button/ButtonLink';
 import { useTranslations } from '../translations/TranslationContext';
 
 const HomePage = () => {
-    const translations = useTranslations();
+    const { translations } = useTranslations();
 
     return (
         <>

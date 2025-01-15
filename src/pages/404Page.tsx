@@ -4,7 +4,7 @@ import ButtonLink from '../components/base/button/ButtonLink';
 import { ButtonVariant } from '../components/base/button/Button.types';
 
 const NotFoundPage = () => {
-    const translations = useTranslations();
+    const { translations } = useTranslations();
     return (
         <>
             <Helmet>

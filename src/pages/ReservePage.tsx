@@ -3,7 +3,7 @@ import ReservationForm from '../components/ReservationForm';
 import { useTranslations } from '../translations/TranslationContext';
 
 const ReservePage = () => {
-    const translations = useTranslations();
+    const { translations } = useTranslations();
 
     return (
         <>

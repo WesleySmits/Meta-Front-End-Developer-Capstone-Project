@@ -2,7 +2,7 @@ import { Helmet } from 'react-helmet-async';
 import { useTranslations } from '../translations/TranslationContext';
 
 const NotFoundPage = () => {
-    const translations = useTranslations();
+    const { translations } = useTranslations();
     return (
         <>
             <Helmet>

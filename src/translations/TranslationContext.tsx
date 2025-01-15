@@ -1,16 +1,43 @@
-import React, { createContext, useContext } from 'react';
+import React, { createContext, useContext, useState } from 'react';
 import enTranslations from './locales/en.json';
 
 type Translations = Record<string, string>;
 
-const TranslationContext = createContext<Translations>(enTranslations);
+interface TranslationContextType {
+    translations: Translations;
+    locale: string;
+    setLocale: (newLocale: string) => void;
+}
+
+const TranslationContext = createContext<TranslationContextType>({
+    translations: enTranslations,
+    locale: 'en',
+    setLocale: () => {},
+});
 
 export const TranslationProvider: React.FC<{ translations: Translations | null; children: React.ReactNode }> = ({
     translations,
     children,
 }) => {
-    const value = translations ?? enTranslations;
-    return <TranslationContext.Provider value={value}>{children}</TranslationContext.Provider>;
+    const [locale, setLocale] = useState(localStorage.getItem('preferredLocale') || 'en');
+
+    const changeLocale = (newLocale: string) => {
+        localStorage.setItem('preferredLocale', newLocale);
+        setLocale(newLocale);
+        window.location.reload();
+    };
+
+    return (
+        <TranslationContext.Provider
+            value={{
+                translations: translations || enTranslations,
+                locale,
+                setLocale: changeLocale,
+            }}
+        >
+            {children}
+        </TranslationContext.Provider>
+    );
 };
 
 // eslint-disable-next-line react-refresh/only-export-components

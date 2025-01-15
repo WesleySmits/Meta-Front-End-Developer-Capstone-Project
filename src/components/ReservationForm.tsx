@@ -16,7 +16,7 @@ type ReservationFormValues = {
 };
 
 const ReservationForm: React.FC = () => {
-    const translations = useTranslations();
+    const { translations } = useTranslations();
     const [successMessage, setSuccessMessage] = useState<string | null>(null);
 
     const validationSchema = Yup.object().shape({

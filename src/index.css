@@ -112,6 +112,22 @@
     box-sizing: inherit;
 }
 
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+body,
+html {
+    opacity: 0;
+    will-change: opacity;
+    animation: fadeIn var(--transition-duration) ease-in-out forwards;
+}
+
 html {
     box-sizing: border-box;
     scroll-behavior: smooth;

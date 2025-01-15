@@ -6,7 +6,8 @@ import { getTranslations } from './translations';
 import { TranslationProvider } from './translations/TranslationContext';
 
 async function main() {
-    const translations = await getTranslations();
+    const userPreferredLocale = localStorage.getItem('preferredLocale') ?? undefined;
+    const translations = await getTranslations(userPreferredLocale);
 
     createRoot(document.getElementById('root')!).render(
         <StrictMode>
